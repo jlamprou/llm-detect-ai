@@ -62,7 +62,7 @@ def run_inference(accelerator, model, infer_dl, example_ids):
     progress_bar.close()
 
     result_df = pd.DataFrame()
-    result_df["id"] = example_ids
+    result_df["tweet_id"] = example_ids
     result_df["generated"] = all_predictions
 
     return result_df
@@ -88,14 +88,14 @@ def main(cfg, save_dir, model_id, csv_path):
     infer_ds.set_format(
         type=None,
         columns=[
-            'id',
+            'tweet_id',
             'input_ids',
             'attention_mask',
             'generated'
         ]
     )
     
-    infer_ids = infer_ds["id"]  # .tolist()
+    infer_ids = infer_ds["tweet_id"]  # .tolist()
     
     #--
     data_collator = AiCollator(
