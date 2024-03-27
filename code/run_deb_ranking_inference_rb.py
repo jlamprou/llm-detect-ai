@@ -35,12 +35,11 @@ def preprocess_text(text):
     for c in char_to_remove:
         text = text.replace(c, "")
 
-    if text[-1]!=".":
+    if text and text[-1]!=".":
         text = text.split(".")
         text = ".".join(text[:-1])
         text += "."
     return text
-
 
 def run_inference(accelerator, model, infer_dl, example_ids):
     model.eval()
