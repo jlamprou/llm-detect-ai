@@ -20,7 +20,8 @@ from transformers import AutoModelForSequenceClassification, BitsAndBytesConfig
 from r_ranking.ai_dataset import AiDataset
 from r_ranking.ai_loader import AiCollator, show_batch
 from r_ranking.ai_model import AiModel
-
+os.makedirs("./outputs", exist_ok=True)
+os.makedirs("./configs", exist_ok=True)
 char_to_remove = ['{', '£', '\x97', '¹', 'å', '\\', '\x85', '<', '\x99', \
                   'é', ']', '+', 'Ö', '\xa0', '>', '|', '\x80', '~', '©', \
                   '/', '\x93', '$', 'Ó', '²', '^', ';', '`', 'á', '*', '(', \

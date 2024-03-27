@@ -1,0 +1,10 @@
+
+model:
+    backbone_path: /kaggle/input/deberta-v3-large
+    max_length: 1296 # 128
+    dropout_rate: 0.0
+    gradient_checkpointing: true
+
+predict_params:
+    checkpoint_path: /kaggle/input/deberta-v3-large-ranking/detect_ai_model_last.pth.tar
+    per_device_eval_batch_size: 1
