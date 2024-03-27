@@ -1,6 +1,6 @@
 
 model:
-    backbone_path: /kaggle/input/deberta-v3-large
+    backbone_path: /home/ilamprou/LLMDetect/llm-detect-ai/models/deberta-v3-large
     max_length: 1296 # 128
     dropout_rate: 0.0
     gradient_checkpointing: true
