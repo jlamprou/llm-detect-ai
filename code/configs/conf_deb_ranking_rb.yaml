@@ -6,5 +6,5 @@ model:
     gradient_checkpointing: true
 
 predict_params:
-    checkpoint_path: /kaggle/input/deberta-v3-large-ranking/detect_ai_model_last.pth.tar
+    checkpoint_path: /home/ilamprou/LLMDetect/llm-detect-ai/models/detect_ai_model_last.pth.tar
     per_device_eval_batch_size: 1
